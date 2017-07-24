@@ -1,0 +1,26 @@
+version: '2'
+
+services:
+  pg9:
+    image: postgres:9.6.3
+    environment:
+      POSTGRES_USER: pgu
+      POSTGRES_PASSWORD: ugp
+
+  test9:
+    build: .
+    links:
+      - pg9
+    command: pg9
+
+  pg10:
+    image: postgres:10-beta2
+    environment:
+      POSTGRES_USER: pgu
+      POSTGRES_PASSWORD: ugp
+
+  test10:
+    build: .
+    links:
+      - pg10
+    command: pg10
