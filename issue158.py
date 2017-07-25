@@ -29,10 +29,11 @@ async def get_pool(loop, pghost):
     return pool
 
 async def workhorse(loop, pghost):
-    for i in range(200):
+    for i in range(100):
         print(".", end="")
         pool = await get_pool(loop, pghost)
         await pool.close()
+    print(" Ok!")
 
 def main():
     import sys
