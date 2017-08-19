@@ -14,7 +14,7 @@ services:
     command: pg9
 
   pg10:
-    image: postgres:10-beta2
+    image: postgres:10-beta3
     environment:
       POSTGRES_USER: pgu
       POSTGRES_PASSWORD: ugp
