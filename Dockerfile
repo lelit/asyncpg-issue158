@@ -1,6 +1,7 @@
-FROM python:3.6.2-slim
+FROM python:3.6.2
 
-RUN pip install --no-cache-dir asyncpg
+RUN pip install --no-cache-dir cython
+RUN pip install --no-cache-dir https://github.com/MagicStack/asyncpg/archive/master.zip
 
 COPY issue158.py /tmp/
 

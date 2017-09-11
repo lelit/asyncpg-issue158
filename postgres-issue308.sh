@@ -11,7 +11,7 @@ docker stop $pg9c
 docker rm -v $pg9c
 
 
-pg10c=`docker run --name pg10 -e POSTGRES_USER=pgu -e POSTGRES_PASSWORD=ugp -d postgres:10-beta3`
+pg10c=`docker run --name pg10 -e POSTGRES_USER=pgu -e POSTGRES_PASSWORD=ugp -d postgres:10-beta4`
 
 docker run --rm -ti --link pg10:pg issue158 pg
 
